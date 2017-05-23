@@ -21,4 +21,8 @@ class NewsDetailViewController: UIViewController, NewsDetailViewProtocol {
     // MARK: NewsDetailViewInput
     func setupInitialState() {
     }
+    
+    @IBAction func back(sender: AnyObject) {
+        presenter?.showNewsListScreen()
+    }
 }

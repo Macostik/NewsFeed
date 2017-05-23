@@ -14,4 +14,8 @@ class NewsDetailPresenter: NewsDetailPresenterProtocol, NewsDetailInteractorOutp
     func viewIsReady() {
         
     }
+    
+    func showNewsListScreen() {
+        router?.showNewsListScreen()
+    }
 }

@@ -26,16 +26,18 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="64"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigationImage" translatesAutoresizingMaskIntoConstraints="NO" id="cxV-TI-Oof">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                        <rect key="frame" x="112" y="7" width="150" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="I82-ng-5BV"/>
+                                            <constraint firstAttribute="height" constant="50" id="erZ-I3-Tc0"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.1176470588" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="16d-Yl-3mM"/>
-                                    <constraint firstAttribute="trailing" secondItem="cxV-TI-Oof" secondAttribute="trailing" id="5rG-8V-tsJ"/>
-                                    <constraint firstItem="cxV-TI-Oof" firstAttribute="top" secondItem="6T0-7s-fzx" secondAttribute="top" id="9il-7v-zZS"/>
-                                    <constraint firstAttribute="bottom" secondItem="cxV-TI-Oof" secondAttribute="bottom" id="CuX-sj-YIb"/>
-                                    <constraint firstItem="cxV-TI-Oof" firstAttribute="leading" secondItem="6T0-7s-fzx" secondAttribute="leading" id="d1T-1i-IW7"/>
+                                    <constraint firstItem="cxV-TI-Oof" firstAttribute="centerX" secondItem="6T0-7s-fzx" secondAttribute="centerX" id="QPK-cB-C7Y"/>
+                                    <constraint firstItem="cxV-TI-Oof" firstAttribute="centerY" secondItem="6T0-7s-fzx" secondAttribute="centerY" id="pGS-iS-Bmi"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BmV-UU-xjM" customClass="StreamView" customModule="StreamView">
@@ -78,7 +80,11 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="64"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigationImage" translatesAutoresizingMaskIntoConstraints="NO" id="igA-Lh-uV7">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                        <rect key="frame" x="112.5" y="7" width="150" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="F6W-SQ-38q"/>
+                                            <constraint firstAttribute="height" constant="50" id="YMU-mp-hpw"/>
+                                        </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRb-T6-udQ">
                                         <rect key="frame" x="0.0" y="-2.5" width="70" height="70"/>
@@ -87,31 +93,43 @@
                                             <constraint firstAttribute="height" constant="70" id="kiJ-fx-aSW"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="back"/>
+                                        <connections>
+                                            <action selector="backWithSender:" destination="Z9u-Rs-FfM" eventType="touchUpInside" id="kQv-Dw-msC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.1176470588" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="aRb-T6-udQ" firstAttribute="leading" secondItem="1EW-Dd-IMq" secondAttribute="leading" id="2al-Xc-apE"/>
-                                    <constraint firstItem="igA-Lh-uV7" firstAttribute="top" secondItem="1EW-Dd-IMq" secondAttribute="top" id="HFi-Es-yr9"/>
                                     <constraint firstAttribute="height" constant="64" id="Ivv-rv-ESQ"/>
                                     <constraint firstItem="aRb-T6-udQ" firstAttribute="centerY" secondItem="1EW-Dd-IMq" secondAttribute="centerY" id="Xne-zA-jbQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="igA-Lh-uV7" secondAttribute="bottom" id="haV-Mn-2sl"/>
-                                    <constraint firstItem="igA-Lh-uV7" firstAttribute="leading" secondItem="1EW-Dd-IMq" secondAttribute="leading" id="nZM-wT-LTZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="igA-Lh-uV7" secondAttribute="trailing" id="v0c-ru-mfD"/>
+                                    <constraint firstItem="igA-Lh-uV7" firstAttribute="centerY" secondItem="1EW-Dd-IMq" secondAttribute="centerY" id="ivW-dd-zoZ"/>
+                                    <constraint firstItem="igA-Lh-uV7" firstAttribute="centerX" secondItem="1EW-Dd-IMq" secondAttribute="centerX" id="pa1-j8-3sm"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ynl-E6-Vg2">
-                                <rect key="frame" x="0.0" y="84" width="375" height="249.5"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="269.5"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nP7-bb-Ff5">
+                                <rect key="frame" x="0.0" y="353.5" width="375" height="313.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Ynl-E6-Vg2" secondAttribute="trailing" id="0GK-Oy-jcv"/>
+                            <constraint firstItem="AKL-Id-s2R" firstAttribute="top" secondItem="nP7-bb-Ff5" secondAttribute="bottom" id="9Zo-Il-TeF"/>
+                            <constraint firstItem="nP7-bb-Ff5" firstAttribute="top" secondItem="Ynl-E6-Vg2" secondAttribute="bottom" id="9fm-kQ-74P"/>
                             <constraint firstAttribute="trailing" secondItem="1EW-Dd-IMq" secondAttribute="trailing" id="NeI-p0-WPz"/>
                             <constraint firstItem="1EW-Dd-IMq" firstAttribute="top" secondItem="zMU-X7-a7H" secondAttribute="bottom" id="UF4-Oe-WER"/>
                             <constraint firstItem="Ynl-E6-Vg2" firstAttribute="top" secondItem="1EW-Dd-IMq" secondAttribute="bottom" id="Z3t-En-c71"/>
                             <constraint firstItem="1EW-Dd-IMq" firstAttribute="leading" secondItem="RHq-e9-Sh1" secondAttribute="leading" id="dml-ZH-MTj"/>
-                            <constraint firstAttribute="centerY" secondItem="Ynl-E6-Vg2" secondAttribute="bottom" id="ukQ-My-hQH"/>
+                            <constraint firstItem="nP7-bb-Ff5" firstAttribute="leading" secondItem="RHq-e9-Sh1" secondAttribute="leading" id="fEf-pn-1AQ"/>
+                            <constraint firstAttribute="trailing" secondItem="nP7-bb-Ff5" secondAttribute="trailing" id="hPm-Dj-ht2"/>
+                            <constraint firstAttribute="centerY" secondItem="Ynl-E6-Vg2" secondAttribute="bottom" constant="-20" id="ukQ-My-hQH"/>
                             <constraint firstItem="Ynl-E6-Vg2" firstAttribute="leading" secondItem="RHq-e9-Sh1" secondAttribute="leading" id="z6q-Be-VyL"/>
                         </constraints>
                     </view>
@@ -123,6 +141,6 @@
     </scenes>
     <resources>
         <image name="back" width="128" height="128"/>
-        <image name="navigationImage" width="512" height="148"/>
+        <image name="navigationImage" width="723" height="352"/>
     </resources>
 </document>

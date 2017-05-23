@@ -9,21 +9,10 @@ import UIKit
 
 class NewsDetailRouter: NewsDetailRouterProtocol {
 
-    func showNewsDetailScreen() {
+    func showNewsListScreen() {
 
-    	let viewController = Storyboard.NewsDetail.instantiate()
-        let presenter = NewsDetailPresenter()
-        let router = NewsDetailRouter()
-        let interactor = NewsDetailInteractor()
-        
-        presenter.view = viewController
-        presenter.interactor = interactor
-        presenter.router = router
-        interactor.output = presenter
-        viewController.presenter = presenter
-
-        let presentingViewController = UIWindow.mainWindow.rootViewController
-        presentingViewController?.present(viewController, animated: true, completion: nil)
+    	let topViewController = UIWindow.mainWindow.rootViewController
+        topViewController?.dismiss(animated: true, completion: nil)
     }
 }
     

@@ -113,7 +113,7 @@ func performRequest(_ function: Any, urlRequest: URLRequestConvertible, completi
     }
 }
 
-enum UserRequest: URLRequestConvertible {
+enum NewsFeedRequest: URLRequestConvertible {
     
     typealias T = EntryParametersPresenting
     
@@ -136,7 +136,11 @@ enum UserRequest: URLRequestConvertible {
         }()
         
         let url: URL = {
-            let relativePath: String = ""
+            var relativePath: String = ""
+            switch self {
+            case .newsFeed(let newPost):
+                relativePath = (newPost.entryParameters.0?.0 ?? "")
+            }
             return Foundation.URL(string: relativePath)!
         }()
         

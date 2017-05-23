@@ -13,6 +13,7 @@ protocol NewsListViewProtocol: class {
     func setupInitialState()
     func showLoading()
     func hideLoading()
+    func showNewsFeed(feedList: [Feed])
 }
 
 protocol NewsListPresenterProtocol: class {
@@ -26,10 +27,14 @@ protocol NewsListPresenterProtocol: class {
 
 protocol NewsListInteractorProtocol: class {
     var output: NewsListInteractorOutput? { get set }
+    var localStorageManager: LocalStorageInteractor? { get set }
+    var remoteStorageManager: RemoteStorageInteractor? { get set }
+    
+    func recieveNewsFeed()
 }
 
 protocol NewsListInteractorOutput: class {
-    
+    func handleNewsFeed(feedsList: [Feed])
 }
 
 protocol NewsListRouterProtocol: class {

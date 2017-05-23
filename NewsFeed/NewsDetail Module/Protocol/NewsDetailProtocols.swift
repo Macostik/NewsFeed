@@ -19,6 +19,7 @@ protocol NewsDetailPresenterProtocol: class {
     var router: NewsDetailRouterProtocol? { get set }
     
     func viewIsReady()
+    func showNewsListScreen()
 }
 
 protocol NewsDetailInteractorProtocol: class {
@@ -30,5 +31,5 @@ protocol NewsDetailInteractorOutput: class {
 }
 
 protocol NewsDetailRouterProtocol: class {
-    func showNewsDetailScreen()
+    func showNewsListScreen()
 }

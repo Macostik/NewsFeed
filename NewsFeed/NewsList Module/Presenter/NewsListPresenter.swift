@@ -13,9 +13,15 @@ class NewsListPresenter: NewsListPresenterProtocol, NewsListInteractorOutput {
 
     func viewIsReady() {
         view?.showLoading()
+        interactor?.recieveNewsFeed()
     }
     
     func showNewsDetailsScreen() {
         router?.showNewsDetailScreen()
+    }
+    
+    func handleNewsFeed(feedsList feedList: [Feed]) {
+        view?.showNewsFeed(feedList: feedList)
+        view?.hideLoading()
     }
 }

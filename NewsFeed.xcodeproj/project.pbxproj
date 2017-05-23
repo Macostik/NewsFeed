@@ -16,6 +16,11 @@
 		5626BD691ED4576500D36A80 /* NewsFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626BD681ED4576500D36A80 /* NewsFeedUITests.swift */; };
 		562C919B1ED47619000D83EB /* Storyboard+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C91991ED47619000D83EB /* Storyboard+Ext.swift */; };
 		562C919C1ED47619000D83EB /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C919A1ED47619000D83EB /* View+Ext.swift */; };
+		562C919F1ED48E9D000D83EB /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C919E1ED48E9D000D83EB /* Feed.swift */; };
+		562C91A11ED491D3000D83EB /* LocalStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C91A01ED491D3000D83EB /* LocalStorageManager.swift */; };
+		562C91A31ED4922A000D83EB /* RemoteStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C91A21ED4922A000D83EB /* RemoteStorageManager.swift */; };
+		562C91A51ED4A17A000D83EB /* Object+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C91A41ED4A17A000D83EB /* Object+Ext.swift */; };
+		562C91A71ED4A8D2000D83EB /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C91A61ED4A8D2000D83EB /* FeedCell.swift */; };
 		566E48761ED45B1F00782018 /* NewsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E48701ED45B1F00782018 /* NewsListInteractor.swift */; };
 		566E48781ED45B1F00782018 /* NewsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E48721ED45B1F00782018 /* NewsListPresenter.swift */; };
 		566E48791ED45B1F00782018 /* NewsListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E48731ED45B1F00782018 /* NewsListProtocols.swift */; };
@@ -66,6 +71,11 @@
 		5626BD6A1ED4576500D36A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		562C91991ED47619000D83EB /* Storyboard+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard+Ext.swift"; sourceTree = "<group>"; };
 		562C919A1ED47619000D83EB /* View+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		562C919E1ED48E9D000D83EB /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		562C91A01ED491D3000D83EB /* LocalStorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorageManager.swift; sourceTree = "<group>"; };
+		562C91A21ED4922A000D83EB /* RemoteStorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteStorageManager.swift; sourceTree = "<group>"; };
+		562C91A41ED4A17A000D83EB /* Object+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Object+Ext.swift"; sourceTree = "<group>"; };
+		562C91A61ED4A8D2000D83EB /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		566E48701ED45B1F00782018 /* NewsListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListInteractor.swift; sourceTree = "<group>"; };
 		566E48721ED45B1F00782018 /* NewsListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListPresenter.swift; sourceTree = "<group>"; };
 		566E48731ED45B1F00782018 /* NewsListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListProtocols.swift; sourceTree = "<group>"; };
@@ -139,6 +149,7 @@
 		5626BD471ED4576400D36A80 /* NewsFeed */ = {
 			isa = PBXGroup;
 			children = (
+				562C919D1ED48E27000D83EB /* Entities */,
 				566E48941ED4661D00782018 /* Common */,
 				566E486F1ED45AC000782018 /* NewsList Module */,
 				566E487D1ED45B3800782018 /* NewsDetail Module */,
@@ -174,14 +185,23 @@
 			children = (
 				562C91991ED47619000D83EB /* Storyboard+Ext.swift */,
 				562C919A1ED47619000D83EB /* View+Ext.swift */,
+				562C91A41ED4A17A000D83EB /* Object+Ext.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		562C919D1ED48E27000D83EB /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				562C919E1ED48E9D000D83EB /* Feed.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		566E486F1ED45AC000782018 /* NewsList Module */ = {
 			isa = PBXGroup;
 			children = (
-				566E48A51ED46D2900782018 /* DataStoregeManager */,
+				566E48A51ED46D2900782018 /* DataStorageManager */,
 				566E48901ED4600200782018 /* Protocol */,
 				566E488F1ED45FF100782018 /* Interactor */,
 				566E48911ED4600B00782018 /* Presenter */,
@@ -272,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				566E48751ED45B1F00782018 /* NewsListViewController.swift */,
+				562C91A61ED4A8D2000D83EB /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,11 +335,13 @@
 			path = SlimLogger;
 			sourceTree = "<group>";
 		};
-		566E48A51ED46D2900782018 /* DataStoregeManager */ = {
+		566E48A51ED46D2900782018 /* DataStorageManager */ = {
 			isa = PBXGroup;
 			children = (
+				562C91A01ED491D3000D83EB /* LocalStorageManager.swift */,
+				562C91A21ED4922A000D83EB /* RemoteStorageManager.swift */,
 			);
-			name = DataStoregeManager;
+			name = DataStorageManager;
 			sourceTree = "<group>";
 		};
 		95233E45D263B3E1842FE8B2 /* Pods */ = {
@@ -527,10 +550,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				566E48871ED45C0C00782018 /* NewsDetailProtocols.swift in Sources */,
+				562C919F1ED48E9D000D83EB /* Feed.swift in Sources */,
 				566E48841ED45C0C00782018 /* NewsDetailInteractor.swift in Sources */,
+				562C91A31ED4922A000D83EB /* RemoteStorageManager.swift in Sources */,
 				566E48881ED45C0C00782018 /* NewsDetailRouter.swift in Sources */,
+				562C91A71ED4A8D2000D83EB /* FeedCell.swift in Sources */,
 				566E48781ED45B1F00782018 /* NewsListPresenter.swift in Sources */,
 				566E48A41ED46A7B00782018 /* SlimLogglyDestinationConfig.swift in Sources */,
+				562C91A11ED491D3000D83EB /* LocalStorageManager.swift in Sources */,
 				566E487A1ED45B1F00782018 /* NewsListRouter.swift in Sources */,
 				566E48891ED45C0C00782018 /* NewsDetailViewController.swift in Sources */,
 				566E48861ED45C0C00782018 /* NewsDetailPresenter.swift in Sources */,
@@ -545,6 +572,7 @@
 				566E48961ED4670400782018 /* APIRequest.swift in Sources */,
 				566E48A11ED46A7B00782018 /* SlimLogger.swift in Sources */,
 				566E487B1ED45B1F00782018 /* NewsListViewController.swift in Sources */,
+				562C91A51ED4A17A000D83EB /* Object+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

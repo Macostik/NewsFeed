@@ -9,6 +9,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FLAnimatedImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PINCache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PINRemoteImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-NewsFeed.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,17 +57,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1E545BE2F7F2941C388F17B088FF2AC1</key>
+		<key>1345FF24F6ABE4F000BB10FA21C99265</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>648BB73CE8B5C6A870E730BE8089BE40</key>
+		<key>2E024C550EDB5FA115770D02C464781C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7237FA2461EC0B4CD70FF5437DD7E384</key>
+		<key>2F4BBCEB883C4620A95D9B69F3AAA9CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4C1455B76676916E55214C9B24C11708</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A4878A4A87B118BAF0877A103373708</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7BEAA3524F73EFCF31D8961A69D48704</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>83B5B60C676A8D31829A6AE91CE86A75</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BD0CF3359BD3EB34E17D34693B58D256</key>
+		<key>A02EE1452A6B9ED8895E739554320B81</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C7FE54660D0D9DC769BEFCDCC2E0EC47</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D44AE392D635ADE69DE4033A746A1784</key>
+		<key>DF5C7FBC18C2EDFAE789759A6281CD9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
