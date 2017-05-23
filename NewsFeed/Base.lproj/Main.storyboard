@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--News List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="NewsListViewController" customModule="NewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newsList" id="BYZ-38-t0r" customClass="NewsListViewController" customModule="NewsFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,21 +22,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="right" translatesAutoresizingMaskIntoConstraints="NO" id="6T0-7s-fzx" userLabel="NavigationBar">
+                                <rect key="frame" x="0.0" y="20" width="375" height="64"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigationImage" translatesAutoresizingMaskIntoConstraints="NO" id="cxV-TI-Oof">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.058823529409999999" green="0.1176470588" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="16d-Yl-3mM"/>
+                                    <constraint firstAttribute="trailing" secondItem="cxV-TI-Oof" secondAttribute="trailing" id="5rG-8V-tsJ"/>
+                                    <constraint firstItem="cxV-TI-Oof" firstAttribute="top" secondItem="6T0-7s-fzx" secondAttribute="top" id="9il-7v-zZS"/>
+                                    <constraint firstAttribute="bottom" secondItem="cxV-TI-Oof" secondAttribute="bottom" id="CuX-sj-YIb"/>
+                                    <constraint firstItem="cxV-TI-Oof" firstAttribute="leading" secondItem="6T0-7s-fzx" secondAttribute="leading" id="d1T-1i-IW7"/>
+                                </constraints>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BmV-UU-xjM" customClass="StreamView" customModule="StreamView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="583"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="BmV-UU-xjM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="DOp-F5-VRm"/>
+                            <constraint firstItem="6T0-7s-fzx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9L2-Fc-vNv"/>
                             <constraint firstAttribute="trailing" secondItem="BmV-UU-xjM" secondAttribute="trailing" id="Qsw-ag-FKO"/>
+                            <constraint firstItem="BmV-UU-xjM" firstAttribute="top" secondItem="6T0-7s-fzx" secondAttribute="bottom" id="Te5-Jb-vS2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BmV-UU-xjM" secondAttribute="bottom" id="VNl-1E-5Sk"/>
                             <constraint firstItem="BmV-UU-xjM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Yfc-B0-UQe"/>
+                            <constraint firstItem="6T0-7s-fzx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ewZ-ma-5WZ"/>
+                            <constraint firstAttribute="trailing" secondItem="6T0-7s-fzx" secondAttribute="trailing" id="hdL-CM-mTR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="mkC-35-xhh"/>
+                    <connections>
+                        <outlet property="streamView" destination="BmV-UU-xjM" id="Zyy-F3-5V8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-436" y="3"/>
+        </scene>
+        <!--News Detail View Controller-->
+        <scene sceneID="Yqk-zN-Poi">
+            <objects>
+                <viewController storyboardIdentifier="newsDetail" id="Z9u-Rs-FfM" customClass="NewsDetailViewController" customModule="NewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zMU-X7-a7H"/>
+                        <viewControllerLayoutGuide type="bottom" id="AKL-Id-s2R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RHq-e9-Sh1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="right" translatesAutoresizingMaskIntoConstraints="NO" id="1EW-Dd-IMq" userLabel="NavigationBar">
+                                <rect key="frame" x="0.0" y="20" width="375" height="64"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigationImage" translatesAutoresizingMaskIntoConstraints="NO" id="igA-Lh-uV7">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRb-T6-udQ">
+                                        <rect key="frame" x="0.0" y="-2.5" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="eid-fM-KtS"/>
+                                            <constraint firstAttribute="height" constant="70" id="kiJ-fx-aSW"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="back"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.058823529409999999" green="0.1176470588" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="aRb-T6-udQ" firstAttribute="leading" secondItem="1EW-Dd-IMq" secondAttribute="leading" id="2al-Xc-apE"/>
+                                    <constraint firstItem="igA-Lh-uV7" firstAttribute="top" secondItem="1EW-Dd-IMq" secondAttribute="top" id="HFi-Es-yr9"/>
+                                    <constraint firstAttribute="height" constant="64" id="Ivv-rv-ESQ"/>
+                                    <constraint firstItem="aRb-T6-udQ" firstAttribute="centerY" secondItem="1EW-Dd-IMq" secondAttribute="centerY" id="Xne-zA-jbQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="igA-Lh-uV7" secondAttribute="bottom" id="haV-Mn-2sl"/>
+                                    <constraint firstItem="igA-Lh-uV7" firstAttribute="leading" secondItem="1EW-Dd-IMq" secondAttribute="leading" id="nZM-wT-LTZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="igA-Lh-uV7" secondAttribute="trailing" id="v0c-ru-mfD"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ynl-E6-Vg2">
+                                <rect key="frame" x="0.0" y="84" width="375" height="249.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ynl-E6-Vg2" secondAttribute="trailing" id="0GK-Oy-jcv"/>
+                            <constraint firstAttribute="trailing" secondItem="1EW-Dd-IMq" secondAttribute="trailing" id="NeI-p0-WPz"/>
+                            <constraint firstItem="1EW-Dd-IMq" firstAttribute="top" secondItem="zMU-X7-a7H" secondAttribute="bottom" id="UF4-Oe-WER"/>
+                            <constraint firstItem="Ynl-E6-Vg2" firstAttribute="top" secondItem="1EW-Dd-IMq" secondAttribute="bottom" id="Z3t-En-c71"/>
+                            <constraint firstItem="1EW-Dd-IMq" firstAttribute="leading" secondItem="RHq-e9-Sh1" secondAttribute="leading" id="dml-ZH-MTj"/>
+                            <constraint firstAttribute="centerY" secondItem="Ynl-E6-Vg2" secondAttribute="bottom" id="ukQ-My-hQH"/>
+                            <constraint firstItem="Ynl-E6-Vg2" firstAttribute="leading" secondItem="RHq-e9-Sh1" secondAttribute="leading" id="z6q-Be-VyL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zwF-Ed-3Ks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="319" y="2"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back" width="128" height="128"/>
+        <image name="navigationImage" width="512" height="148"/>
+    </resources>
 </document>

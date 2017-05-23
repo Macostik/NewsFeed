@@ -30,7 +30,5 @@ protocol NewsDetailInteractorOutput: class {
 }
 
 protocol NewsDetailRouterProtocol: class {
-	var navigationController: UINavigationController? { get set }
-    static func pushNewsDetailScreen(navigationController: UINavigationController)
-    static func showNewsDetailScreen(window: UIWindow)
+    func showNewsDetailScreen()
 }

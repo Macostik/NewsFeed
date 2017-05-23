@@ -14,6 +14,8 @@
 		5626BD531ED4576400D36A80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5626BD511ED4576400D36A80 /* LaunchScreen.storyboard */; };
 		5626BD5E1ED4576500D36A80 /* NewsFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626BD5D1ED4576500D36A80 /* NewsFeedTests.swift */; };
 		5626BD691ED4576500D36A80 /* NewsFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626BD681ED4576500D36A80 /* NewsFeedUITests.swift */; };
+		562C919B1ED47619000D83EB /* Storyboard+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C91991ED47619000D83EB /* Storyboard+Ext.swift */; };
+		562C919C1ED47619000D83EB /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C919A1ED47619000D83EB /* View+Ext.swift */; };
 		566E48761ED45B1F00782018 /* NewsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E48701ED45B1F00782018 /* NewsListInteractor.swift */; };
 		566E48781ED45B1F00782018 /* NewsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E48721ED45B1F00782018 /* NewsListPresenter.swift */; };
 		566E48791ED45B1F00782018 /* NewsListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E48731ED45B1F00782018 /* NewsListProtocols.swift */; };
@@ -62,6 +64,8 @@
 		5626BD641ED4576500D36A80 /* NewsFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5626BD681ED4576500D36A80 /* NewsFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedUITests.swift; sourceTree = "<group>"; };
 		5626BD6A1ED4576500D36A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		562C91991ED47619000D83EB /* Storyboard+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard+Ext.swift"; sourceTree = "<group>"; };
+		562C919A1ED47619000D83EB /* View+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		566E48701ED45B1F00782018 /* NewsListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListInteractor.swift; sourceTree = "<group>"; };
 		566E48721ED45B1F00782018 /* NewsListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListPresenter.swift; sourceTree = "<group>"; };
 		566E48731ED45B1F00782018 /* NewsListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListProtocols.swift; sourceTree = "<group>"; };
@@ -165,9 +169,19 @@
 			path = NewsFeedUITests;
 			sourceTree = "<group>";
 		};
+		562C91981ED475FC000D83EB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				562C91991ED47619000D83EB /* Storyboard+Ext.swift */,
+				562C919A1ED47619000D83EB /* View+Ext.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		566E486F1ED45AC000782018 /* NewsList Module */ = {
 			isa = PBXGroup;
 			children = (
+				566E48A51ED46D2900782018 /* DataStoregeManager */,
 				566E48901ED4600200782018 /* Protocol */,
 				566E488F1ED45FF100782018 /* Interactor */,
 				566E48911ED4600B00782018 /* Presenter */,
@@ -273,6 +287,7 @@
 		566E48941ED4661D00782018 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				562C91981ED475FC000D83EB /* Extensions */,
 				566E48951ED4670400782018 /* APIRequest.swift */,
 			);
 			name = Common;
@@ -297,6 +312,13 @@
 				566E48A01ED46A7B00782018 /* SlimLogglyDestinationConfig.swift */,
 			);
 			path = SlimLogger;
+			sourceTree = "<group>";
+		};
+		566E48A51ED46D2900782018 /* DataStoregeManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataStoregeManager;
 			sourceTree = "<group>";
 		};
 		95233E45D263B3E1842FE8B2 /* Pods */ = {
@@ -514,6 +536,8 @@
 				566E48861ED45C0C00782018 /* NewsDetailPresenter.swift in Sources */,
 				566E48761ED45B1F00782018 /* NewsListInteractor.swift in Sources */,
 				566E48A21ED46A7B00782018 /* SlimLoggerConfig.swift in Sources */,
+				562C919B1ED47619000D83EB /* Storyboard+Ext.swift in Sources */,
+				562C919C1ED47619000D83EB /* View+Ext.swift in Sources */,
 				566E48791ED45B1F00782018 /* NewsListProtocols.swift in Sources */,
 				566E48981ED469FE00782018 /* Logger.swift in Sources */,
 				566E48A31ED46A7B00782018 /* SlimLogglyDestination.swift in Sources */,

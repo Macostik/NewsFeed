@@ -11,6 +11,8 @@ protocol NewsListViewProtocol: class {
     var presenter: NewsListPresenterProtocol? { get set }
     
     func setupInitialState()
+    func showLoading()
+    func hideLoading()
 }
 
 protocol NewsListPresenterProtocol: class {
@@ -19,6 +21,7 @@ protocol NewsListPresenterProtocol: class {
     var router: NewsListRouterProtocol? { get set }
     
     func viewIsReady()
+    func showNewsDetailsScreen()
 }
 
 protocol NewsListInteractorProtocol: class {
@@ -30,7 +33,6 @@ protocol NewsListInteractorOutput: class {
 }
 
 protocol NewsListRouterProtocol: class {
-	var navigationController: UINavigationController? { get set }
-    static func pushNewsListScreen(navigationController: UINavigationController)
-    static func showNewsListScreen(window: UIWindow)
+    func showNewsListScreen()
+    func showNewsDetailScreen()
 }

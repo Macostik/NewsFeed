@@ -8,43 +8,27 @@
 import UIKit
 
 class NewsListRouter: NewsListRouterProtocol {
-    var navigationController: UINavigationController?
 
-    static func pushNewsListScreen(navigationController: UINavigationController) {
-    	let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "NewsListViewController") as! NewsListViewController
+    func showNewsListScreen() {
+
+        let viewController = Storyboard.NewsList.instantiate()
         let presenter = NewsListPresenter()
         let router = NewsListRouter()
         let interactor = NewsListInteractor()
         
-        viewController.presenter = presenter
         presenter.view = viewController
-        presenter.router = router
         presenter.interactor = interactor
+        presenter.router = router
         interactor.output = presenter
-        router.navigationController = navigationController
+        viewController.presenter = presenter
         
-        navigationController.pushViewController(viewController, animated: true)
+        let mainWindow = UIWindow.mainWindow
+        mainWindow.rootViewController = viewController
+        mainWindow.makeKeyAndVisible()
     }
-
-    static func showNewsListScreen(window: UIWindow) {
-
-    	let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "NewsListViewController") as! NewsListViewController
-        let presenter = NewsListPresenter()
-        let router = NewsListRouter()
-        let interactor = NewsListInteractor()
-        let navigationController = UINavigationController(rootViewController: viewController)
-        
-        presenter.view = viewController
-        presenter.interactor = interactor
-        presenter.router = router
-        interactor.output = presenter
-        viewController.presenter = presenter
-        router.navigationController = navigationController
-        
-        window.rootViewController = navigationController
-        window.makeKeyAndVisible()
+    
+    func showNewsDetailScreen() {
+        NewsDetailRouter().showNewsDetailScreen()
     }
 }
     

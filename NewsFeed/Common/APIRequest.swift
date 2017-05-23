@@ -45,11 +45,7 @@ extension EntryParametersPresenting where Self: EntryParametersPresentable {
     }
 }
 
-struct LoginEntryParams: EntryParametersPresenting, EntryParametersPresentable {
-    internal var entryParameters: EntryParameters
-}
-
-struct LogoutEntryParams: EntryParametersPresenting, EntryParametersPresentable {
+struct NewsFeedEntryParams: EntryParametersPresenting, EntryParametersPresentable {
     internal var entryParameters: EntryParameters
 }
 
